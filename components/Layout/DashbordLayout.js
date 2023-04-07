@@ -10,17 +10,18 @@ export default function DashboardLayout({ children }) {
         sx={{
           display: "flex",
           flexDirection: "row",
-          height: "100vh",
+          height: "90vh",
         }}
       >
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ width:"260px" }}>
           <Sidebar />
         </Box>
         <Box sx={{ flexGrow: 5 }}>
           <main>{children}</main>
+          <h1>Footer</h1>
         </Box>
       </Box>
-      <h1>Footer</h1>
+      
     </>
   );
 }
