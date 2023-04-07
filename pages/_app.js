@@ -14,5 +14,6 @@ import "@/components/Footer/Newsletter.css";
 import "@/components/Navbar/Navbar.css";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(<Component {...pageProps} />);
 }

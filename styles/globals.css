@@ -17,6 +17,9 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+
+  /* Development */
+  border: #0C0C0C 1px solid;
 }
 
 a {
