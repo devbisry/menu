@@ -13,7 +13,7 @@ export default function DashboardLayout({ children }) {
           height: "90vh",
         }}
       >
-        <Box sx={{ width:"260px" }}>
+        <Box>
           <Sidebar />
         </Box>
         <Box sx={{ flexGrow: 5 }}>

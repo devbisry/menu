@@ -1,10 +1,9 @@
 import FoodCard from "@/components/Card/FoodCard";
-import DataTable from "@/components/DashboardItems/Table";
 import DashboardLayout from "@/components/Layout/DashbordLayout";
-import { Box, Input, TextField, Button, Card } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { BsSearch } from "react-icons/bs";
 
-export default function Dashboard() {
+export default function Menu() {
   return (
     <>
       <h1 align="center">Dashboard</h1>
@@ -37,14 +36,32 @@ export default function Dashboard() {
           }}
         />
 
-        <Button variant="contained">Add New</Button>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 2,
+          }}
+        >
+          <Button variant="contained">Add New</Button>
+          <Button variant="contained">Add New</Button>
+          <Button variant="outlined">Add New</Button>
+          <Button variant="contained">Add New</Button>
+          <Button variant="contained">Add New</Button>
+          <Button variant="outlined">Add New</Button>
+          <Button variant="contained">Add New</Button>
+        </Box>
       </Box>
-
       <Box
         sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+            xl: "repeat(4, 1fr)",
+          },
           padding: "1rem 5rem",
           gap: 2,
         }}
@@ -52,19 +69,18 @@ export default function Dashboard() {
         <FoodCard />
         <FoodCard />
         <FoodCard />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          padding: 2,
-        }}
-      >
-        <DataTable />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
+        <FoodCard />
       </Box>
     </>
   );
 }
 
-Dashboard.getLayout = function getLayout(page) {
+Menu.getLayout = function getLayout(page) {
   return <DashboardLayout>{page}</DashboardLayout>;
 };
